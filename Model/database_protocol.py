@@ -5,7 +5,7 @@ import mysql.connector
 #stores all the constants for the database connection
 CREDENTIALS = database_credentials
 
-class database_protocol:
+class DatabaseProtocol:
     ''' Class will have all the functions necessary to interact with the database
     Including connecting, querying data, and adding new data to the database tables'''
     __slots__ = ['__database']
@@ -25,8 +25,6 @@ class database_protocol:
                 print("connection successful")
             except mysql.connector.Error as e:
                  print(f"Error connecting to the server: {e}")
-            
-
 
     def is_connected(self):
         '''Checks if the server is connected'''
