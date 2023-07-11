@@ -1,6 +1,7 @@
 #User class unit testing
 
 import user
+import random
 
 def test_create_user_username():
     #setup
@@ -43,3 +44,14 @@ def test_password_hash():
 
     #analyze
     assert expected == actual.get_password_hash()
+
+def test_get_id():
+    #setup
+    random.seed(1)
+    expected = 623347347958
+    new_user = user.User('dragonMan44','kdakdmv394jklas',0)
+    #invoke
+    actual = new_user.get_userID()
+
+    #analyze
+    assert expected == actual
