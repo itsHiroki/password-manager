@@ -29,6 +29,9 @@ class User:
     
     def get_password_hash(self):
         return self.__password_hash
+
+    def get_userID(self):
+        return self.__userID
     
     def set_password(self,password):
         self.__password = password
