@@ -1,3 +1,6 @@
+#In charge of communicating with the database
+#And has functions to request data and add data to the database
+
 #Separate file that has all the credentials to access the mysql server
 import database_credentials
 import mysql.connector
