@@ -1,3 +1,5 @@
+#Has the data for creating new users
+
 #imports
 import hashlib
 import random
@@ -19,11 +21,14 @@ class User:
             self.__userID = userID
             self.__password_hash = password
         
-        def get_username():
-            return self.__username
+    def get_username(self):
+        return self.__username
 
-        def get_password():
-            return self.__password
-        
-        def set_password(password):
-            self.__password = password
+    def get_password(self):
+        return self.__password
+    
+    def get_password_hash(self):
+        return self.__password_hash
+    
+    def set_password(self,password):
+        self.__password = password
